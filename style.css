@@ -673,7 +673,6 @@ h1, h2, h3, h4, .marca {
     color: var(--tinta-2);
 }
 
-/* Habilidades (Tags visuais corporativas) */
 .habilidades {
     border-top: 1px solid var(--linha);
 }
@@ -710,6 +709,7 @@ h1, h2, h3, h4, .marca {
     box-shadow: 0 1px 2px rgba(0,0,0,0.02);
 }
 
+/* ---------- Rodapé ---------- */
 .rodape {
     padding: 64px 0 40px;
     border-top: 1px solid var(--linha);
@@ -735,45 +735,93 @@ h1, h2, h3, h4, .marca {
     color: var(--tinta);
 }
 
-/* Espaçamento entre os botões do rodapé */
 .rodape-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; 
+    gap: 12px;
 }
 
-/* Transforma os links e o "Voltar ao topo" em botões elegantes */
-.rodape-links a,
-.rodape .topo-link {
+.rodape-links a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.6); /* Fundo translúcido */
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.6);
     border: 1px solid var(--linha);
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 6px;
     color: var(--tinta);
     text-decoration: none;
     transition: all 0.2s ease;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Efeito ao passar o rato (Hover) - Ficam azuis e levantam ligeiramente */
-.rodape-links a:hover,
+.rodape-links a:hover {
+    background: var(--azul);
+    border-color: var(--azul);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rodape-base {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--linha);
+    color: var(--tinta-2);
+    font-size: 0.9rem;
+}
+
+.rodape-base p {
+    grid-column: 1;
+    margin: 0;
+}
+
+.rodape .topo-link {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--linha);
+    border-radius: 6px;
+    color: var(--tinta);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
 .rodape .topo-link:hover {
     background: var(--azul);
     border-color: var(--azul);
     color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 860px) {
-    .menu-botao {
-        display: inline-block;
+    .rodape-base {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
     }
-
+    .rodape-base p, .rodape .topo-link {
+        grid-column: 1;
+    }
+    .rodape .topo-link {
+        justify-self: center;
+    }
+}
     .nav-links {
         position: absolute;
         top: 72px;
@@ -877,7 +925,6 @@ h1, h2, h3, h4, .marca {
         gap: 16px;
         padding: 24px 0;
     }
-}
 
 @media (prefers-reduced-motion: reduce) {
     html {
