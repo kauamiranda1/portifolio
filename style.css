@@ -709,7 +709,6 @@ h1, h2, h3, h4, .marca {
     box-shadow: 0 1px 2px rgba(0,0,0,0.02);
 }
 
-/* ---------- Rodapé ---------- */
 .rodape {
     padding: 64px 0 40px;
     border-top: 1px solid var(--linha);
@@ -809,19 +808,11 @@ h1, h2, h3, h4, .marca {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 860px) {
-    .rodape-base {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 20px;
+@media (max-width: 950px) {
+    .menu-botao {
+        display: inline-block;
     }
-    .rodape-base p, .rodape .topo-link {
-        grid-column: 1;
-    }
-    .rodape .topo-link {
-        justify-self: center;
-    }
-}
+
     .nav-links {
         position: absolute;
         top: 72px;
@@ -865,9 +856,9 @@ h1, h2, h3, h4, .marca {
 
     .hero {
         padding: 48px 0 64px;
-        text-align: center;
     }
 
+    /* Apenas em ecrãs abaixo de 950px é que a foto vai para baixo do texto */
     .hero-grade, 
     .sobre-grade, 
     .duas-colunas {
@@ -875,12 +866,16 @@ h1, h2, h3, h4, .marca {
         gap: 48px;
     }
 
+    .hero-texto {
+        text-align: center;
+    }
+
     .hero-botoes {
         justify-content: center;
     }
 
     .foto {
-        width: min(320px, 90%);
+        width: min(280px, 90%);
     }
 
     .sobre-grade h2 {
@@ -925,6 +920,7 @@ h1, h2, h3, h4, .marca {
         gap: 16px;
         padding: 24px 0;
     }
+}
 
 @media (prefers-reduced-motion: reduce) {
     html {
