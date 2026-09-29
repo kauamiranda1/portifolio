@@ -8,7 +8,7 @@ A ideia foi sair do óbvio e construir algo que refletisse a identidade visual e
 
 ## 🔗 Acesse o Projeto Online
 Você pode ver o resultado final rodando ao vivo aqui:
-👉 **[Link do Site no GitHub Pages]**(Insira o seu link aqui)
+👉 **[Link do Site no GitHub Pages]**[(Insira o seu link aqui)](https://kauamiranda1.github.io/portifolio/)
 
 ---
 
